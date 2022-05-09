@@ -1,5 +1,12 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (let i = 0; i < array.length - 1; i++) {
+    for (let n = i + 1; n < array.length; n++) {
+      if (array[i] + array[n] === target) {
+        return true
+      }
+    }
+  }
+  return false
 }
 
 /* 
@@ -8,6 +15,9 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  remove larger numbers from equation
+  check rest against each other
+  return true if they equal target
 */
 
 /*
